@@ -25,3 +25,7 @@ fruits = [
 @app.get("/fruits")
 def get_fruits():
     return {"fruits": fruits}
+
+@app.get("")
+def root():
+    return {"message": "Hello World"}
