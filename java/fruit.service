@@ -4,7 +4,7 @@ Group=ec2-user
 WorkingDirectory=/home/ec2-user/fruits-veg_market/java
 
 
-ExecStart=/bin/bash -c 'mvn spring-boot:run -Dspring-boot.run.arguments="--server.address=0.0.0.0 --server.port=8080" &'
+ExecStart=/bin/bash -c 'mvn spring-boot:run -Dspring-boot.run.arguments="--server.address=0.0.0.0 --server.port=9090" &'
 
 Restart =always
 RestartSec=5
