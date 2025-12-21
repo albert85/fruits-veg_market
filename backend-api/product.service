@@ -4,7 +4,7 @@ Group=ec2-user
 WorkingDirectory=/home/ec2-user/fruits-veg_market/backend-api
 
 
-ExecStart=/bin/bash -c 'source .venv/bin/activate && uvicorn main:app --host 0.0.0.0 --port 9000'
+ExecStart=/bin/bash -c 'source .venv/bin/activate && uvicorn main:app --host 0.0.0.0 --port 8000'
 
 Restart =always
 RestartSec=5
