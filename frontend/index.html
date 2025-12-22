@@ -961,7 +961,7 @@ function renderProducts() {
 
 async function loadProducts() {
   try {
-    const res = await fetch("https://devop-training-mini-project.duckdns.org/api/products");
+    const res = await fetch("https://devop-training-domain.duckdns.org/api/products");
     products = await res.json();
     renderProducts();
   } catch (err) {
