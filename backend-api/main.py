@@ -1,5 +1,6 @@
 from pathlib import Path
 from typing import Optional, List
+import os
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -12,8 +13,12 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session
 # -----------------------------
 # DATABASE CONFIG
 # -----------------------------
+db_username = os.getenv("DB_USERNAME") or "postgres"
+db_password = os.getenv("DB_PASSWORD") or "postgres"
+db_host = os.getenv("DB_HOST") or "localhost"
+
 DATABASE_URL = (
-    "postgresql+psycopg://db_username:db_password@db_host:5432/postgres"
+    f"postgresql+psycopg://{db_username}:{db_password}@{db_host}:5432/postgres"
 )
 
 engine = create_engine(
