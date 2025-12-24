@@ -1,4 +1,7 @@
 [Service]
+Environment="DB_USERNAME=db_name"
+Environment="DB_PASSWORD=db_password"
+Environment="DB_HOST=db_host"
 User=ec2-user
 Group=ec2-user
 WorkingDirectory=/home/ec2-user/fruits-veg_market/backend-api
