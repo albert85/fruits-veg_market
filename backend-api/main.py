@@ -16,6 +16,7 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session
 db_username = os.getenv("DB_USERNAME") or "postgres"
 db_password = os.getenv("DB_PASSWORD") or "postgres"
 db_host = os.getenv("DB_HOST") or "localhost"
+print(f"Connecting to DB at {db_host} with user {db_username}")
 
 DATABASE_URL = (
     f"postgresql+psycopg://{db_username}:{db_password}@{db_host}:5432/postgres"
