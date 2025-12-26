@@ -310,3 +310,7 @@ def get_products():
 @app.get("/", response_class=HTMLResponse)
 def index():
     return Path("index.html").read_text(encoding="utf-8")
+
+@app.get("/health", tags=["Health"])
+def health():
+    return {"status": "ok"}
